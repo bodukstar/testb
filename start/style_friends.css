@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("fon.gif");  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #d8723774;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+#curtain-left {
+    left: 0;
+    transform: translateX(0);
+    animation: openLeftCurtain 3s forwards;
+    
+}
+
+#curtain-right {
+    right: 0;
+    transform: translateX(0);
+    animation: openRightCurtain 3s forwards;
+}
+
+#content {
+    position: relative;
+    z-index: 500;
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeInContent 3s 3s forwards;
+}
+
+@keyframes openLeftCurtain {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes openRightCurtain {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeInContent {
+    to {
+        opacity: 1;
+    }
+}
+
+.speech-bubble {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    text-align: center;
+}
+
+.choices {
+    margin-top: 20px;
+}
+
+.choices button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.choices button:hover {
+    background-color: #0056b3;
+}

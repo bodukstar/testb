@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=VT323&display=swap');
+
+* {
+    background-color: black;
+    padding: 5px;
+    margin: 0; /* Зменшення зовнішнього відступу */
+    font-family: "VT323", monospace;
+    color: #ffffff;
+}
+
+.shimmering-text {
+    top: 0;
+    background-image: linear-gradient(to right, #aa2c2c 10%, #4a5f9f 50%, #863583 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 8s infinite linear;
+    text-align: center;
+    font-size: 200px;
+}
+
+@keyframes shimmer {
+    0% {
+      background-position: -1000px;
+    }
+    100% {
+      background-position: 1000px;
+    }
+}
+
+.block_inf {
+    position: absolute;
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    left: 160px;
+    top: 1px;
+    width: 0.5px;
+    height: 0.5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    z-index: -1;
+    font-size: 30px;
+}
+
+.container {
+    margin: auto;
+    border: 3px solid;
+    border-radius: 10px;
+    box-shadow: #863583;
+    width: 700px;
+    height: 600px;
+}
+
+.play {
+    height: 60px;
+    width: 60px;
+}
+
+.play img {
+    height: 70px;
+    width: 100px;
+    position: absolute;
+    left: 660px;
+    top: 66%;
+    z-index: 0;
+}
+
+body img {
+    width: 300px;
+    height: 300px;
+}
+
+.gif-static, .gif-animated {
+    width: 800px;
+    height: auto;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Блоки там де буде текст інших людей */
+.blok1 {
+    margin-top: 60px; /* Відступ зверху для відділення блоків */
+    z-index: 1;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 10px;
+    box-shadow: #863583;
+    width: 700px;
+    height: 500px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px; /* Внутрішній відступ зліва */
+    margin-left: 0; /* Вирівнювання блоку до лівого краю */
+    position: relative;
+}
+
+.blok1 img {
+  position: absolute;
+  right: 40px;
+}
+
+#fren1 {
+  position: relative;
+  height: 30px;
+  width: auto;
+  padding: 0;
+  font-size: 30px;
+  text-align: left; /* Вирівнювання тексту до лівого краю */
+  z-index: 2;
+}
